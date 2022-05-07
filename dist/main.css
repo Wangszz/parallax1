@@ -29,4 +29,39 @@ body .parallax-wrapper .outro_screen {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+body .parallax-wrapper .parallax_group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+body .parallax-wrapper .parallax_group .parallax_layer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .parallax-wrapper .parallax_group .base_layer {
+  /* Scale-Calculation 1 + ((Z-transform-value * -1) / perspective) */
+  transform: translateZ(-300px) scale(2);
+}
+body .parallax-wrapper .parallax_group .mid_layer {
+  transform: translateZ(0);
+}
+body .parallax-wrapper .parallax_group .top_layer {
+  transform: translateZ(150px) scale(0.5);
+}
+body .parallax-wrapper #intro {
+  z-index: 0;
+}
+body .parallax-wrapper #group1 {
+  z-index: -1;
+}
+body .parallax-wrapper #group1 > .base_layer {
+  background-color: crimson;
+  width: 100vw;
+}
+body .parallax-wrapper #group2 > .mid_layer {
+  background-color: yellowgreen;
 }/*# sourceMappingURL=main.css.map */
