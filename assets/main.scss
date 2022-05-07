@@ -1,0 +1,33 @@
+@use './abstarcs/mixin' as *;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'helvetica', sans-serif;
+    font-weight: bolder;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: black;
+
+    .parallax-wrapper {
+        height: 100vh;
+        overflow-x: hidden;
+        overflow-y: auto;
+        perspective: 300px;
+
+        .intro_screen{
+            background-color: tomato;
+            height: 100vh;
+            @include align-center;
+        }
+
+        .outro_screen {
+            background-color: teal;
+            height: 100vh;
+            @include align-center;
+        }
+    }
+}
